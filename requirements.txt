@@ -1,0 +1,4 @@
+requests
+maltego_trx
+telethon
+bs4
