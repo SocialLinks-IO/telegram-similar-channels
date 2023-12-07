@@ -1,4 +1,6 @@
-# Telegram similar channels (CLI + Maltego)
+# Telegram similar channels (CLI and Maltego tool)
+
+<img src='https://github.com/SocialLinks-IO/telegram-similar-channels/assets/31013580/d6206261-d6e1-47e6-9325-d562b5416a86' width='500'>
 
 ## Preparation
 
