@@ -27,7 +27,7 @@ def get_similar_channels(channel):
     bot = TelegramClient(SESSION_FILE_NAME, API_ID, API_HASH)
 
     with bot:
-        result = loop.run_until_complete(safe_api_request(bot(functions.channels.GetChannelRecommendationsRequest(channel=channel)), 'get user photos'))
+        result = loop.run_until_complete(safe_api_request(bot(functions.channels.GetChannelRecommendationsRequest(channel=channel)), 'get channels'))
         return result
 
 
@@ -37,10 +37,15 @@ class GetSimilarTelegramChannels(DiscoverableTransform):
     def create_entities(cls, request: MaltegoMsg, response: MaltegoTransform):
         channel_name = request.getProperty("alias")
 
-        channels = get_similar_channels(channel_name).chats
+        if not channel_name:
+            channel_name = request.Value
 
-        # print(channels)
+        result = get_similar_channels(channel_name)
 
+        if not result:
+            return
+
+        channels = result.chats
 
         # Iterate through all returned Yellow Notices
         for ch in channels:
@@ -60,5 +65,3 @@ class GetSimilarTelegramChannels(DiscoverableTransform):
                     channel.addProperty("profile-image", value=image)
                 except:
                     pass
-
-            # print(channel)
