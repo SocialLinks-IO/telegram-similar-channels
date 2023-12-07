@@ -1,10 +1,15 @@
 # Telegram similar channels (CLI + Maltego)
 
-## How to use as a CLI tool
+## Preparation
 
+- [Register Telegram application](https://core.telegram.org/api/obtaining_api_id) to get API_ID and API_HASH
+- Put API_ID and API_HASH in `transforms/credentials.py`
+- Install dependencies:
 ```
 pip3 install -r requirements.txt
 ```
+
+## How to use as a CLI tool
 
 ```sh
 ./search.py
