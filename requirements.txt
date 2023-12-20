@@ -1,4 +1,4 @@
 requests
 maltego_trx
-telethon
+Telethon>=1.33.0
 bs4
