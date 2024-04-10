@@ -4,6 +4,11 @@
 <img src='https://github.com/SocialLinks-IO/telegram-similar-channels/assets/31013580/d6206261-d6e1-47e6-9325-d562b5416a86' width='500'>
 </p>
 
+## SOWEL classification
+
+This tool uses the following OSINT techniques:
+- [SOTL-7.5. Gather Content By Snowballing Sampling](https://sowel.soxoj.com/snowball-sampling)
+
 ## Installation
 
 - [Register Telegram application](https://core.telegram.org/api/obtaining_api_id) to get API_ID and API_HASH
